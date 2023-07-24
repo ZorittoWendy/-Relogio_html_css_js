@@ -1,0 +1,45 @@
+.clock::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: black;
+    transform: translate(-50%, 50%);
+}
+
+.clock .time{
+    
+    --rotation:0;
+    
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(rotation) * 1deg));
+    transform-origin:bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.clock .time.seconds{
+    width: 3px;
+    height: 40%;
+    background-color: red;
+}
+
+.clock .time.minutes{
+    width: 7px;
+    height: 30%;
+    background-color: black;
+}
+
+.clock .time.hors{
+    width: 9px;
+    height: 25%;
+    background-color: black;
+}
