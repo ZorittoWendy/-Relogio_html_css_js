@@ -8,7 +8,7 @@
     left: 50%;
     z-index: 11;
     background-color: black;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
 }
 
 .clock .time{
@@ -20,7 +20,7 @@
     left: 50%;
     background-color: black;
     z-index: 10;
-    transform: translateX(-50%) rotate(calc(var(rotation) * 1deg));
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
     transform-origin:bottom;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -38,7 +38,7 @@
     background-color: black;
 }
 
-.clock .time.hors{
+.clock .time.hours{
     width: 9px;
     height: 25%;
     background-color: black;

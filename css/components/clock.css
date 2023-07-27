@@ -1,4 +1,4 @@
-.clock{
+.clock {
     width: 500px;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -8,7 +8,6 @@
 }
 
 .clock .number{
-    
     --rotation: 0;
 
     position: absolute;
