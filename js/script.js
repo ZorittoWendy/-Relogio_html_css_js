@@ -1,6 +1,8 @@
 const hoursTime = document.querySelector(".time.hours")
-const minutesTime = document.querySelector(".time.seconds")
-const secondsTime = document.querySelector(".time.minutes")
+const secondsTime = document.querySelector(".time.seconds")
+const minutesTime = document.querySelector(".time.minutes")
+
+
 
 const setRotation = (element, rotationPercentege) => {
     element.style.setProperty("--rotation", rotationPercentege * 360)
@@ -9,13 +11,13 @@ const setRotation = (element, rotationPercentege) => {
 const setClock = () => {
     const currentDate = new Date();
 
-    const secondsPercentege = currentDate.getSeconds() / 60;
-    const minutesPercentege = (secondsPercentege + currentDate.getMinutes()) / 60
-    const hoursPercentege = (minutesPercentege + currentDate.getHours()) / 12
+    const secondsPercentage = currentDate.getSeconds() / 60
+    const minutesPercentage = (secondsPercentage  + currentDate.getMinutes()) / 60
+    const hoursPercentage = (minutesPercentage + currentDate.getHours()) / 12
 
-    setRotation(secondsTime, secondsPercentege);
-    setRotation(minutesTime, minutesPercentege);
-    setRotation(hoursTime , hoursPercentege)
+    setRotation(secondsTime, secondsPercentage)
+    setRotation(minutesTime, minutesPercentage)
+    setRotation(hoursTime, hoursPercentage)
 }
 
 setClock();
